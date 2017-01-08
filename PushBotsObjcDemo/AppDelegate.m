@@ -3,7 +3,7 @@
 //  PushBotsObjcDemo
 //
 //  Created by Atiaa on 1/4/17.
-//  Copyright © 2017 Atia M2. All rights reserved.
+//  Copyright © 2017 PushBots. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -17,7 +17,38 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    self.PushbotsClient = [[Pushbots alloc] initWithAppId:@"YOUR_APPID" prompt:YES];
+    
+    [self.PushbotsClient trackPushNotificationOpenedWithLaunchOptions:launchOptions];
+    
+    NSDictionary *userInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+    if (userInfo) {
+        //Check for openURL [optional]
+        [Pushbots openURL:userInfo];
+        //Capture notification data e.g. badge, alert and sound
+        NSDictionary *aps = [userInfo objectForKey:@"aps"];
+        
+        if (aps) {
+            NSDictionary *notificationDict = [userInfo objectForKey:@"aps"];
+            NSDictionary *alertDict = [notificationDict objectForKey:@"alert"];
+            NSString *alertbody = [alertDict objectForKey:@"body"];
+            NSString *alertTitle= [alertDict objectForKey:@"title"];
+            
+            UIAlertController * alert = [UIAlertController
+                                         alertControllerWithTitle:alertTitle
+                                         message:alertbody
+                                         preferredStyle:UIAlertControllerStyleAlert];
+            
+            [self.window.rootViewController presentViewController:alert animated:YES completion:NULL];
+        }
+        //Capture custom fields
+//        NSString* articleId = [userInfo objectForKey:@"articleId"];
+    }
+
     return YES;
+    
 }
 
 
@@ -47,5 +78,56 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Register the deviceToken on Pushbots
+    [self.PushbotsClient registerOnPushbots:deviceToken];
+}
 
+-(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
+    NSLog(@"Notification Registration Error %@", [error description]);
+}
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    //Check for openURL [optional]
+    //[Pushbots openURL:userInfo];
+    //Track notification only if the application opened from Background by clicking on the notification.
+    if (application.applicationState == UIApplicationStateInactive) {
+        [self.PushbotsClient trackPushNotificationOpenedWithPayload:userInfo];
+    }
+    
+    //The application was already active when the user got the notification, just show an alert.
+    //That should *not* be considered open from Push.
+    if (application.applicationState == UIApplicationStateActive) {
+        NSDictionary *notificationDict = [userInfo objectForKey:@"aps"];
+        NSDictionary *alertDict = [notificationDict objectForKey:@"alert"];
+        NSString *alertbody = [alertDict objectForKey:@"body"];
+        NSString *alertTitle= [alertDict objectForKey:@"title"];
+        
+        UIAlertController * alert = [UIAlertController
+                                     alertControllerWithTitle:alertTitle
+                                     message:alertbody
+                                     preferredStyle:UIAlertControllerStyleAlert];
+        
+        [self.window.rootViewController presentViewController:alert animated:YES completion:NULL];
+    }
+}
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo  fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler {
+    // .. Process notification data
+    handler(UIBackgroundFetchResultNewData);
+    [Pushbots openURL:userInfo];
+
+    NSDictionary *notificationDict = [userInfo objectForKey:@"aps"];
+    NSDictionary *alertDict = [notificationDict objectForKey:@"alert"];
+    NSString *alertbody = [alertDict objectForKey:@"body"];
+    NSString *alertTitle= [alertDict objectForKey:@"title"];
+    
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:alertTitle
+                                 message:alertbody
+                                 preferredStyle:UIAlertControllerStyleAlert];
+
+    [self.window.rootViewController presentViewController:alert animated:YES completion:NULL];
+
+}
 @end
