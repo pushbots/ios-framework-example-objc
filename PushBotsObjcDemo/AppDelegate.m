@@ -19,7 +19,7 @@
     // Override point for customization after application launch.
     
     
-    self.PushbotsClient = [[Pushbots alloc] initWithAppId:@"YOUR_APPID" prompt:YES];
+    self.PushbotsClient = [[Pushbots alloc] initWithAppId:@"YOUR_APP_ID" prompt:YES];
     
     [self.PushbotsClient trackPushNotificationOpenedWithLaunchOptions:launchOptions];
     
@@ -31,6 +31,7 @@
         NSDictionary *aps = [userInfo objectForKey:@"aps"];
         
         if (aps) {
+            //If you send title for the notifications
             NSDictionary *notificationDict = [userInfo objectForKey:@"aps"];
             NSDictionary *alertDict = [notificationDict objectForKey:@"alert"];
             NSString *alertbody = [alertDict objectForKey:@"body"];
@@ -41,12 +42,23 @@
                                          message:alertbody
                                          preferredStyle:UIAlertControllerStyleAlert];
             
+            /* If you didn't send title for the notifications
+             NSDictionary *notificationDict = [userInfo objectForKey:@"aps"];
+             NSString *alertString = [notificationDict objectForKey:@"alert"];
+             
+             UIAlertController * alert = [UIAlertController
+             alertControllerWithTitle:@"Push Notification Received"
+             message:alertString
+             preferredStyle:UIAlertControllerStyleAlert];
+             
+             */
+            
             [self.window.rootViewController presentViewController:alert animated:YES completion:NULL];
         }
         //Capture custom fields
-//        NSString* articleId = [userInfo objectForKey:@"articleId"];
+        //        NSString* articleId = [userInfo objectForKey:@"articleId"];
     }
-
+    
     return YES;
     
 }
@@ -86,6 +98,7 @@
 -(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
     NSLog(@"Notification Registration Error %@", [error description]);
 }
+
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
     //Check for openURL [optional]
@@ -98,6 +111,8 @@
     //The application was already active when the user got the notification, just show an alert.
     //That should *not* be considered open from Push.
     if (application.applicationState == UIApplicationStateActive) {
+        
+        //If you send title for the notifications
         NSDictionary *notificationDict = [userInfo objectForKey:@"aps"];
         NSDictionary *alertDict = [notificationDict objectForKey:@"alert"];
         NSString *alertbody = [alertDict objectForKey:@"body"];
@@ -108,26 +123,28 @@
                                      message:alertbody
                                      preferredStyle:UIAlertControllerStyleAlert];
         
-        [self.window.rootViewController presentViewController:alert animated:YES completion:NULL];
+        /* If you didn't send title for the notifications
+         NSDictionary *notificationDict = [userInfo objectForKey:@"aps"];
+         NSString *alertString = [notificationDict objectForKey:@"alert"];
+         
+         UIAlertController * alert = [UIAlertController
+         alertControllerWithTitle:@"Push Notification Received"
+         message:alertString
+         preferredStyle:UIAlertControllerStyleAlert];
+         
+         */
+
+         [self.window.rootViewController presentViewController:alert animated:YES completion:NULL];
+         
     }
 }
-- (void)application:(UIApplication *)application
-didReceiveRemoteNotification:(NSDictionary *)userInfo  fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler {
-    // .. Process notification data
-    handler(UIBackgroundFetchResultNewData);
-    [Pushbots openURL:userInfo];
 
-    NSDictionary *notificationDict = [userInfo objectForKey:@"aps"];
-    NSDictionary *alertDict = [notificationDict objectForKey:@"alert"];
-    NSString *alertbody = [alertDict objectForKey:@"body"];
-    NSString *alertTitle= [alertDict objectForKey:@"title"];
-    
-    UIAlertController * alert = [UIAlertController
-                                 alertControllerWithTitle:alertTitle
-                                 message:alertbody
-                                 preferredStyle:UIAlertControllerStyleAlert];
-
-    [self.window.rootViewController presentViewController:alert animated:YES completion:NULL];
-
-}
+//Slient Notification
+//- (void)application:(UIApplication *)application
+//didReceiveRemoteNotification:(NSDictionary *)userInfo  fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler {
+//    // .. Process notification data
+//    handler(UIBackgroundFetchResultNewData);
+//    [Pushbots openURL:userInfo];
+//
+//}
 @end
