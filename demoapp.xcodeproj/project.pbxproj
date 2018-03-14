@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA49BA9E2059824C00948194 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA49BA9D2059824C00948194 /* AppDelegate.m */; };
+		BA49BAA12059824C00948194 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA49BAA02059824C00948194 /* ViewController.m */; };
+		BA49BAA42059824C00948194 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA49BAA22059824C00948194 /* Main.storyboard */; };
+		BA49BAA62059824C00948194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA49BAA52059824C00948194 /* Assets.xcassets */; };
+		BA49BAA92059824C00948194 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA49BAA72059824C00948194 /* LaunchScreen.storyboard */; };
+		BA49BAAC2059824C00948194 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA49BAAB2059824C00948194 /* main.m */; };
+		BA49BABA2059826700948194 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = BA49BAB92059826700948194 /* NotificationService.m */; };
+		BA49BABE2059826800948194 /* PushbotsNSExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BA49BAB62059826700948194 /* PushbotsNSExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BA49BAC5205982B100948194 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA49BAC4205982B100948194 /* SystemConfiguration.framework */; };
+		BA49BAC7205982B400948194 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA49BAC6205982B400948194 /* CoreTelephony.framework */; };
+		BA49BAC9205982C600948194 /* Pushbots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA49BAC8205982C500948194 /* Pushbots.framework */; };
+		BA49BACA205982C600948194 /* Pushbots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA49BAC8205982C500948194 /* Pushbots.framework */; };
+		BA49BACB205982CF00948194 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA49BAC4205982B100948194 /* SystemConfiguration.framework */; };
+		BA49BACC205982D200948194 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA49BAC6205982B400948194 /* CoreTelephony.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA49BABC2059826800948194 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA49BA912059824C00948194 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA49BAB52059826700948194;
+			remoteInfo = PushbotsNSExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BA49BAC22059826800948194 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BA49BABE2059826800948194 /* PushbotsNSExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BA49BA992059824C00948194 /* demoapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demoapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA49BA9C2059824C00948194 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BA49BA9D2059824C00948194 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BA49BA9F2059824C00948194 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BA49BAA02059824C00948194 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BA49BAA32059824C00948194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA49BAA52059824C00948194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA49BAA82059824C00948194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BA49BAAA2059824C00948194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA49BAAB2059824C00948194 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BA49BAB62059826700948194 /* PushbotsNSExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PushbotsNSExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA49BAB82059826700948194 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
+		BA49BAB92059826700948194 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
+		BA49BABB2059826800948194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA49BAC4205982B100948194 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BA49BAC6205982B400948194 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		BA49BAC8205982C500948194 /* Pushbots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pushbots.framework; sourceTree = "<group>"; };
+		BA49BACD205982E200948194 /* demoapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = demoapp.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA49BA962059824C00948194 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA49BAC7205982B400948194 /* CoreTelephony.framework in Frameworks */,
+				BA49BAC5205982B100948194 /* SystemConfiguration.framework in Frameworks */,
+				BA49BAC9205982C600948194 /* Pushbots.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA49BAB32059826700948194 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA49BACC205982D200948194 /* CoreTelephony.framework in Frameworks */,
+				BA49BACB205982CF00948194 /* SystemConfiguration.framework in Frameworks */,
+				BA49BACA205982C600948194 /* Pushbots.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA49BA902059824C00948194 = {
+			isa = PBXGroup;
+			children = (
+				BA49BA9B2059824C00948194 /* demoapp */,
+				BA49BAB72059826700948194 /* PushbotsNSExtension */,
+				BA49BA9A2059824C00948194 /* Products */,
+				BA49BAC3205982B000948194 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BA49BA9A2059824C00948194 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA49BA992059824C00948194 /* demoapp.app */,
+				BA49BAB62059826700948194 /* PushbotsNSExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA49BA9B2059824C00948194 /* demoapp */ = {
+			isa = PBXGroup;
+			children = (
+				BA49BACD205982E200948194 /* demoapp.entitlements */,
+				BA49BA9C2059824C00948194 /* AppDelegate.h */,
+				BA49BA9D2059824C00948194 /* AppDelegate.m */,
+				BA49BA9F2059824C00948194 /* ViewController.h */,
+				BA49BAA02059824C00948194 /* ViewController.m */,
+				BA49BAA22059824C00948194 /* Main.storyboard */,
+				BA49BAA52059824C00948194 /* Assets.xcassets */,
+				BA49BAA72059824C00948194 /* LaunchScreen.storyboard */,
+				BA49BAAA2059824C00948194 /* Info.plist */,
+				BA49BAAB2059824C00948194 /* main.m */,
+			);
+			path = demoapp;
+			sourceTree = "<group>";
+		};
+		BA49BAB72059826700948194 /* PushbotsNSExtension */ = {
+			isa = PBXGroup;
+			children = (
+				BA49BAB82059826700948194 /* NotificationService.h */,
+				BA49BAB92059826700948194 /* NotificationService.m */,
+				BA49BABB2059826800948194 /* Info.plist */,
+			);
+			path = PushbotsNSExtension;
+			sourceTree = "<group>";
+		};
+		BA49BAC3205982B000948194 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA49BAC8205982C500948194 /* Pushbots.framework */,
+				BA49BAC6205982B400948194 /* CoreTelephony.framework */,
+				BA49BAC4205982B100948194 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA49BA982059824C00948194 /* demoapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA49BAAF2059824C00948194 /* Build configuration list for PBXNativeTarget "demoapp" */;
+			buildPhases = (
+				BA49BA952059824C00948194 /* Sources */,
+				BA49BA962059824C00948194 /* Frameworks */,
+				BA49BA972059824C00948194 /* Resources */,
+				BA49BAC22059826800948194 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA49BABD2059826800948194 /* PBXTargetDependency */,
+			);
+			name = demoapp;
+			productName = demoapp;
+			productReference = BA49BA992059824C00948194 /* demoapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA49BAB52059826700948194 /* PushbotsNSExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA49BABF2059826800948194 /* Build configuration list for PBXNativeTarget "PushbotsNSExtension" */;
+			buildPhases = (
+				BA49BAB22059826700948194 /* Sources */,
+				BA49BAB32059826700948194 /* Frameworks */,
+				BA49BAB42059826700948194 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PushbotsNSExtension;
+			productName = PushbotsNSExtension;
+			productReference = BA49BAB62059826700948194 /* PushbotsNSExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA49BA912059824C00948194 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Abdullah Diaa";
+				TargetAttributes = {
+					BA49BA982059824C00948194 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					BA49BAB52059826700948194 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BA49BA942059824C00948194 /* Build configuration list for PBXProject "demoapp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA49BA902059824C00948194;
+			productRefGroup = BA49BA9A2059824C00948194 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA49BA982059824C00948194 /* demoapp */,
+				BA49BAB52059826700948194 /* PushbotsNSExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA49BA972059824C00948194 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA49BAA92059824C00948194 /* LaunchScreen.storyboard in Resources */,
+				BA49BAA62059824C00948194 /* Assets.xcassets in Resources */,
+				BA49BAA42059824C00948194 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA49BAB42059826700948194 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA49BA952059824C00948194 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA49BAA12059824C00948194 /* ViewController.m in Sources */,
+				BA49BAAC2059824C00948194 /* main.m in Sources */,
+				BA49BA9E2059824C00948194 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA49BAB22059826700948194 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA49BABA2059826700948194 /* NotificationService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA49BABD2059826800948194 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA49BAB52059826700948194 /* PushbotsNSExtension */;
+			targetProxy = BA49BABC2059826800948194 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA49BAA22059824C00948194 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA49BAA32059824C00948194 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BA49BAA72059824C00948194 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA49BAA82059824C00948194 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA49BAAD2059824C00948194 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BA49BAAE2059824C00948194 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA49BAB02059824C00948194 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = demoapp/demoapp.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24VS857ZNA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = demoapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pushbots.demopbapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA49BAB12059824C00948194 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = demoapp/demoapp.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24VS857ZNA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = demoapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pushbots.demopbapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BA49BAC02059826800948194 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24VS857ZNA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = PushbotsNSExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pushbots.demoapp.PushbotsNSExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA49BAC12059826800948194 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24VS857ZNA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = PushbotsNSExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pushbots.demoapp.PushbotsNSExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA49BA942059824C00948194 /* Build configuration list for PBXProject "demoapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA49BAAD2059824C00948194 /* Debug */,
+				BA49BAAE2059824C00948194 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA49BAAF2059824C00948194 /* Build configuration list for PBXNativeTarget "demoapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA49BAB02059824C00948194 /* Debug */,
+				BA49BAB12059824C00948194 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA49BABF2059826800948194 /* Build configuration list for PBXNativeTarget "PushbotsNSExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA49BAC02059826800948194 /* Debug */,
+				BA49BAC12059826800948194 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA49BA912059824C00948194 /* Project object */;
+}
